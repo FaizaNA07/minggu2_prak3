@@ -40,4 +40,4 @@ Route:: get('/about/{about?}', function ($what=null){
 })
 
 
-Route::get('/comment/{name}', [CommentController::class,'comment']);
+Route::get('/comment/{name}', [CommentController::class,'comment'.$name]);
