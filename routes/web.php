@@ -25,6 +25,7 @@ Route::prefix('prodi')->group(function () {
     Route::get('/mi', [ProdiController::class, 'prodi']);
     Route::get('/ti', [ProdiController::class, 'prodi']);
 });
+
 Route::get('/news/{id}', [NewsController::class,'news']);
 
 Route::prefix('sarana')->group(function () {
