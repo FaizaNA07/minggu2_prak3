@@ -1,10 +1,10 @@
 <?php
 
-use app\Http\Controllers\HomeController;
-use app\Http\Controllers\ProdiController;
-use app\Http\Controllers\SaranaController;
-use app\Http\Controllers\NewsController;
-use app\Http\Controllers\CommentController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\SaranaController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', [HomeController::class,'home']);
+Route::get('/home', [HomeController::class, 'home']);
 
 Route::prefix('prodi')->group(function () {
-    Route::get('/mi', [ProdiController::class,'prodi']);
-    Route::get('/ti', [ProdiController::class,'prodi']);
+    Route::get('/mi', [ProdiController::class, 'prodi']);
+    Route::get('/ti', [ProdiController::class, 'prodi']);
 });
 
 Route::get('/news/{id}', [NewsController::class,'news']);
@@ -35,9 +35,6 @@ Route::prefix('sarana')->group(function () {
     Route::get('/lainnya', [SaranaController::class,'sarana']);
 });
 
-Route:: get('/about/{about?}', function ($what=null){
-    return 'Menampilkan about us <br>'.$about;
-})
+Route::get('/about', [HomeController::class, 'about']);
 
-
-Route::get('/comment/{name}', [CommentController::class,'comment'.$name]);
+Route::get('/comment/{id}/{pesan}', [NewsController::class,'comment']);
