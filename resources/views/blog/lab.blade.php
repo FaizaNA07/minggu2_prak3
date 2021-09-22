@@ -1,5 +1,5 @@
 <html>
     <body>
-        <h3>Sarana Laboratorium</h3>
+        <h3>Ini Halaman Sarana Laboratorium</h3>
     </body>
 </html>

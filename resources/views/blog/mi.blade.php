@@ -1,5 +1,5 @@
 <html>
     <body>
-        <h3>Program Studi Manajemen Informatika</h3>
+        <h3>Program Studi <br> Manajemen Informatika</h3>
     </body>
 </html>
